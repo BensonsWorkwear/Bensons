@@ -14,7 +14,6 @@ import com.bensonsworkwear.bensons.NavigationActivity;
 import com.bensonsworkwear.bensons.R;
 import com.bensonsworkwear.bensons.adapter.INavigation;
 import com.bensonsworkwear.bensons.adapter.NavigationAdapter;
-import com.bensonsworkwear.bensons.model.NavigationData;
 
 import java.util.ArrayList;
 
@@ -56,12 +55,12 @@ public class NavigationFragment extends Fragment implements INavigation {
         return view;
     }
 
-    private ArrayList<NavigationData> fillData() {
-        ArrayList<NavigationData> navigationDataArrayList = new ArrayList<>();
+    private ArrayList<com.bensonsworkwear.bensons.model.NavigationData> fillData() {
+        ArrayList<com.bensonsworkwear.bensons.model.NavigationData> navigationDataArrayList = new ArrayList<>();
         String array_navigation[] = getResources().getStringArray(R.array.array_navigation);
 
         for (int i = 0; i < array_navigation.length; i++) {
-            NavigationData navigationData = new NavigationData();
+            com.bensonsworkwear.bensons.model.NavigationData navigationData = new com.bensonsworkwear.bensons.model.NavigationData();
             navigationData.setName(array_navigation[i]);
             navigationData.setDrawableId(array_icons[i]);
             navigationDataArrayList.add(navigationData);
