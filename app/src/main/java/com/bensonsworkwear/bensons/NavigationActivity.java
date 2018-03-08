@@ -32,15 +32,11 @@ public class NavigationActivity extends AppCompatActivity {
 
     DrawerLayout drawer;
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.toolbar_ivNavigation)
-    ImageView toolbar_ivNavigation;
-    @BindView(R.id.toolbar_tvTitle)
-    TextView tvTitle;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.toolbar_ivNavigation) ImageView toolbar_ivNavigation;
+    @BindView(R.id.toolbar_tvTitle) TextView tvTitle;
 
-    @OnClick(R.id.toolbar_ivNavigation)
-    void onClickNavigation() {
+    @OnClick(R.id.toolbar_ivNavigation) void onClickNavigation() {
         openCloseDrawer();
     }
 
@@ -73,7 +69,8 @@ public class NavigationActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (drawer.isDrawerOpen(RIGHT)) {
             drawer.closeDrawer(RIGHT);
-        } else {
+        }
+        else {
             super.onBackPressed();
         }
     }
@@ -120,14 +117,14 @@ public class NavigationActivity extends AppCompatActivity {
                 break;
         }
 
-        replaceFragment(fragment, tag);
+        replaceFragment(fragment,tag);
 
     }
 
     public void replaceFragment(Fragment fragment, String tag) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flContainerFragment, fragment, tag)
+                .replace(R.id.flContainerFragment, fragment,tag)
                 .commit();
 
         setToolbarTitle(tag);
