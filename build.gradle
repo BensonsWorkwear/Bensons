@@ -4,7 +4,7 @@ ext {
             package             : "com.bensonsworkwear.bensons",
             buildToolsVersion   : "25.0.1",
             compileVersion      : 23,
-            minSdk              : 15,
+            minSdk              : 19,
             targetSdk           : 25,
             version_code        : 1,
             version_name        : "1.0",
