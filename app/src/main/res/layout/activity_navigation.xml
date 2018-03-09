@@ -26,12 +26,6 @@
 
         </LinearLayout>
 
-        <!--
-            This line creates a render problem error.
-            android:layout_gravity="right"
-            Changing it to left fixes the problem but opening the
-            drawer crashes the app, so I'll have to live seeing the error.
-        -->
         <FrameLayout
             android:id="@+id/flContainerNavigationMenu"
             android:layout_width="260dp"
