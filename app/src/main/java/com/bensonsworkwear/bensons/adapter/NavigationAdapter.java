@@ -1,5 +1,6 @@
 package com.bensonsworkwear.bensons.adapter;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -39,6 +40,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         @OnClick(R.id.ivNavigation) void onClickIcon()
         {
             if(ivNavigation != null)
+                //noinspection deprecation
                 listener.onIconClick(Integer.parseInt(ButterKnife.findById(ivNavigation,R.id.ivNavigation).getTag().toString()));
         }
 
@@ -54,8 +56,9 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         }
     }
 
+    @NonNull
     @Override
-    public NavigationAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NavigationAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_navigation, parent, false);
 
@@ -63,7 +66,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(NavigationAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NavigationAdapter.ViewHolder holder, int position) {
         NavigationData navigationData = navigationDatas.get(position);
         if (holder.tvNavigationName != null) {
             holder.tvNavigationName.setText(navigationData.getName());
