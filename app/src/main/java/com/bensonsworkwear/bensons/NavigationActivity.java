@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -64,6 +65,9 @@ public class NavigationActivity extends AppCompatActivity {
         replaceNavigationFragment();
     }
 
+    /**
+     *  If the drawer is open it closes it otherwise calls the supperclass of {@link FragmentActivity#onBackPressed()}
+     */
     @SuppressLint("RtlHardcoded")
     @Override
     public void onBackPressed() {
@@ -75,17 +79,28 @@ public class NavigationActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Opens the drawer, if the drawer is already open it closes it.
+     */
     private void openCloseDrawer() {
         if (drawer.isDrawerOpen(RIGHT)) drawer.closeDrawer(RIGHT);
         else drawer.openDrawer(RIGHT);
     }
 
+    /**
+     * Replaces the fragment with another activity.
+     */
     public void replaceNavigationFragment() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.flContainerNavigationMenu, NavigationFragment.newInstance(), "Navigation").commit();
     }
 
+    /**
+     * Detects the selected item and sets the activity fragment according to the selection.
+     *
+     * @param position The position selected.
+     */
     public void replaceFragment(int position) {
         Fragment fragment = null;
         String tag = null;
@@ -121,6 +136,12 @@ public class NavigationActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Replaces the fragment with another activity.
+     *
+     * @param fragment The activity to be replace the fragment.
+     * @param tag The new title of the toolbar.
+     */
     public void replaceFragment(Fragment fragment, String tag) {
         getSupportFragmentManager()
                 .beginTransaction()
@@ -131,14 +152,26 @@ public class NavigationActivity extends AppCompatActivity {
         closeNavigationDrawer();
     }
 
+    /**
+     * Sets the title on the toolbar of the activity. Receives a title of the type String
+     * and replaces the current title.
+     *
+     * @param title The String to be set as the title of the activity.
+     */
     public void setToolbarTitle(String title) {
         tvTitle.setText(title);
     }
 
+    /**
+     * If the Drawer is open it closes it.
+     */
     public void closeNavigationDrawer() {
         if (drawer.isDrawerOpen(RIGHT)) drawer.closeDrawer(RIGHT);
     }
 
+    /**
+     * Unbinds all views from Butterknife to release memory before closing.
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
