@@ -43,12 +43,18 @@ public class NavigationActivity extends AppCompatActivity {
 
     Unbinder unbinder;
 
+    /**
+     * Runs when the activity is created. Sets the name of the activity, icons and fragments.
+     *
+     * @param savedInstanceState Value will be null the first time called. Otherwise it will pass the bundle.
+     */
     @SuppressWarnings("deprecation")
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
         unbinder = ButterKnife.bind(this);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setToolbarTitle(getString(R.string.title_navigation_activity));
@@ -66,7 +72,7 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     *  If the drawer is open it closes it otherwise calls the supperclass of {@link FragmentActivity#onBackPressed()}
+     *  If the drawer is open it closes it otherwise calls the superclass of {@link FragmentActivity}
      */
     @SuppressLint("RtlHardcoded")
     @Override
