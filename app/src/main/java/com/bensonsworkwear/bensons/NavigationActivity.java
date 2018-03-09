@@ -1,6 +1,5 @@
 package com.bensonsworkwear.bensons;
 
-import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -27,7 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-import static android.view.Gravity.RIGHT;
+import static android.view.Gravity.START;
 
 public class NavigationActivity extends AppCompatActivity {
 
@@ -56,12 +55,12 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
 
         unbinder = ButterKnife.bind(this);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setToolbarTitle(getString(R.string.title_navigation_activity));
         toolbar.setNavigationIcon(null);
         setSupportActionBar(toolbar);
 
-        drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawer = findViewById(R.id.drawerLayout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, null, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -74,11 +73,10 @@ public class NavigationActivity extends AppCompatActivity {
     /**
      *  If the drawer is open it closes it otherwise calls the superclass of {@link FragmentActivity}
      */
-    @SuppressLint("RtlHardcoded")
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(RIGHT)) {
-            drawer.closeDrawer(RIGHT);
+        if (drawer.isDrawerOpen(START)) {
+            drawer.closeDrawer(START);
         }
         else {
             super.onBackPressed();
@@ -89,8 +87,8 @@ public class NavigationActivity extends AppCompatActivity {
      * Opens the drawer, if the drawer is already open it closes it.
      */
     private void openCloseDrawer() {
-        if (drawer.isDrawerOpen(RIGHT)) drawer.closeDrawer(RIGHT);
-        else drawer.openDrawer(RIGHT);
+        if (drawer.isDrawerOpen(START)) drawer.closeDrawer(START);
+        else drawer.openDrawer(START);
     }
 
     /**
@@ -177,7 +175,7 @@ public class NavigationActivity extends AppCompatActivity {
      * If the Drawer is open it closes it.
      */
     public void closeNavigationDrawer() {
-        if (drawer.isDrawerOpen(RIGHT)) drawer.closeDrawer(RIGHT);
+        if (drawer.isDrawerOpen(START)) drawer.closeDrawer(START);
     }
 
     /**

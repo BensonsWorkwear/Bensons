@@ -36,7 +36,7 @@
             android:id="@+id/flContainerNavigationMenu"
             android:layout_width="260dp"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
+            android:layout_gravity="start"
             android:background="@android:color/white">
         </FrameLayout>
 
