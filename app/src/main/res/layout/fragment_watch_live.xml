@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:textSize="26sp"
-        android:text="@string/menu_watchlive" />
+        android:text="@string/menu_watchlive"
+        android:textSize="26sp" />
 
 </LinearLayout>

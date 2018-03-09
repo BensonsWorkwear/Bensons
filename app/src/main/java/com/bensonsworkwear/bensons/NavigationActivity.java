@@ -32,11 +32,15 @@ public class NavigationActivity extends AppCompatActivity {
 
     DrawerLayout drawer;
 
-    @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.toolbar_ivNavigation) ImageView toolbar_ivNavigation;
-    @BindView(R.id.toolbar_tvTitle) TextView tvTitle;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.toolbar_ivNavigation)
+    ImageView toolbar_ivNavigation;
+    @BindView(R.id.toolbar_tvTitle)
+    TextView tvTitle;
 
-    @OnClick(R.id.toolbar_ivNavigation) void onClickNavigation() {
+    @OnClick(R.id.toolbar_ivNavigation)
+    void onClickNavigation() {
         openCloseDrawer();
     }
 
@@ -71,14 +75,13 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     *  If the drawer is open it closes it otherwise calls the superclass of {@link FragmentActivity}
+     * If the drawer is open it closes it otherwise calls the superclass of {@link FragmentActivity}
      */
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(START)) {
             drawer.closeDrawer(START);
-        }
-        else {
+        } else {
             super.onBackPressed();
         }
     }
@@ -140,7 +143,7 @@ public class NavigationActivity extends AppCompatActivity {
                 break;
         }
 
-        replaceFragment(fragment,tag);
+        replaceFragment(fragment, tag);
 
     }
 
@@ -149,12 +152,12 @@ public class NavigationActivity extends AppCompatActivity {
      * used and then string for the title.
      *
      * @param fragment The activity to be replace the fragment.
-     * @param tag The new title of the toolbar.
+     * @param tag      The new title of the toolbar.
      */
     public void replaceFragment(Fragment fragment, String tag) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flContainerFragment, fragment,tag)
+                .replace(R.id.flContainerFragment, fragment, tag)
                 .commit();
 
         setToolbarTitle(tag);

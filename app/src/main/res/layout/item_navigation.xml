@@ -3,35 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@drawable/selector_view"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/ivNavigation"
-            android:src="@drawable/icon_menu_news"
+            style="@style/ivCommon"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            tools:ignore="ContentDescription"
-            style="@style/ivCommon"
-            />
+            android:src="@drawable/icon_menu_news"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvNavigationName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/ivNavigation"
             android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/ivNavigation"
+            android:padding="5dp"
             android:textColor="@color/navigation_txt_color"
             android:textSize="15sp"
-            android:padding="5dp"
-            android:layout_marginStart="10dp"
             tools:text="name" />
 
     </RelativeLayout>
@@ -39,8 +36,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/navigation_sep_color"
         android:layout_marginStart="15dp"
-        />
+        android:background="@color/navigation_sep_color" />
 
 </LinearLayout>
