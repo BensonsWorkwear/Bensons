@@ -17,7 +17,7 @@
             android:id="@+id/ivNavigation"
             android:src="@drawable/icon_menu_news"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             tools:ignore="ContentDescription"
             style="@style/ivCommon"
             />
@@ -26,12 +26,12 @@
             android:id="@+id/tvNavigationName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/ivNavigation"
+            android:layout_toEndOf="@+id/ivNavigation"
             android:layout_centerVertical="true"
             android:textColor="@color/navigation_txt_color"
             android:textSize="15sp"
             android:padding="5dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             tools:text="name" />
 
     </RelativeLayout>
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/navigation_sep_color"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         />
 
 </LinearLayout>
