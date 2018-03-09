@@ -111,6 +111,10 @@ public class NavigationActivity extends AppCompatActivity {
         Fragment fragment = null;
         String tag = null;
 
+        /* Parameter comes from the element pressed in the navigation drawer.
+        * Pressing the first one will give the value 0 which means that the user
+        * wants to go to the news section
+        */
         switch (position) {
             case 0:
                 fragment = NewsFragment.newInstance();
@@ -143,7 +147,8 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     * Replaces the fragment with another activity.
+     * Replaces the fragment with another activity. It receives the fragment that wants to be
+     * used and then string for the title.
      *
      * @param fragment The activity to be replace the fragment.
      * @param tag The new title of the toolbar.
