@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.navigationdrawerwithrecyclerview.R;
+import com.bensonsworkwear.bensons.R;
 
 import butterknife.ButterKnife;
 
