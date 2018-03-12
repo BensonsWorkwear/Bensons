@@ -8,7 +8,7 @@ public class NavigationData {
 
     /**
      * TODO: Investigar que hace esto
-     * Returns
+     * Returns true if selected
      *
      * @return <code>True</code> if the element is selected
      */

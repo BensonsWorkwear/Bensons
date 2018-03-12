@@ -24,6 +24,11 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     private List<NavigationData> navigationDatas;
     private INavigation listener;
 
+    /**
+     *
+     *
+     * @param listener {@link INavigation} listener
+     */
     public NavigationAdapter(INavigation listener) {
         navigationDatas = new ArrayList<>();
         this.listener = listener;
@@ -38,6 +43,9 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         @BindView(R.id.ivNavigation)
         ImageView ivNavigation;
 
+        /**
+         * Currently not used, it gets the tag of the image pressed and sends it to the listener.
+         */
         @OnClick(R.id.ivNavigation)
         void onClickIcon() {
             if (ivNavigation != null)
@@ -45,18 +53,35 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
                 listener.onIconClick(Integer.parseInt(ButterKnife.findById(ivNavigation, R.id.ivNavigation).getTag().toString()));
         }
 
+        /**
+         * {@link ViewHolder}
+         *
+         * @param itemView
+         */
         private ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
         }
 
+        /**
+         * Gets the tag of the selected element. After that it sends it to the listener.
+         *
+         * @param view The current {@link View} of the app.
+         */
         @Override
         public void onClick(View view) {
             listener.onViewClick(Integer.parseInt(view.getTag().toString()));
         }
     }
 
+    /**
+     * TODO Esto puede estar escrito bastante mejor
+     *
+     * @param parent The parent of the {@link ViewGroup}
+     * @param viewType
+     * @return The {@link NavigationAdapter} {@link ViewHolder} @link ItemView}
+     */
     @NonNull
     @Override
     public NavigationAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -66,6 +91,12 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         return new NavigationAdapter.ViewHolder(itemView);
     }
 
+    /**
+     *
+     *
+     * @param holder
+     * @param position Position
+     */
     @Override
     public void onBindViewHolder(@NonNull NavigationAdapter.ViewHolder holder, int position) {
         NavigationData navigationData = navigationDatas.get(position);
@@ -81,17 +112,32 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         holder.itemView.setBackgroundResource(navigationData.isSelected() ? R.color.ripple_color : android.R.color.transparent);
     }
 
+    /**
+     * Getter for the {@link NavigationData} count.
+     *
+     * @return Size of the {@link NavigationData}.
+     */
     @Override
     public int getItemCount() {
         return navigationDatas.size();
     }
 
+    /**
+     * Clears and fills an {@link ArrayList} with the data received.
+     *
+     * @param data Navigation data {@link ArrayList}.
+     */
     public void refreshAdapter(ArrayList<NavigationData> data) {
         navigationDatas.clear();
         navigationDatas.addAll(data);
         notifyDataSetChanged();
     }
 
+    /**
+     * Sets the selected position in the selected position in the {@link NavigationData}.
+     *
+     * @param position Selected position.
+     */
     public void setSelected(int position) {
         for (int i = 0; i < navigationDatas.size(); i++) {
             navigationDatas.get(i).setSelected(i == position);

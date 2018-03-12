@@ -51,7 +51,7 @@ public class NavigationActivity extends AppCompatActivity {
      *
      * @param savedInstanceState Value will be null the first time called. Otherwise it will pass the bundle.
      */
-    @SuppressWarnings("deprecation")
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class NavigationActivity extends AppCompatActivity {
         drawer = findViewById(R.id.drawerLayout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, null, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         replaceFragment(0);
@@ -75,7 +75,7 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     * If the drawer is open it closes it otherwise calls the superclass of {@link FragmentActivity}
+     * Closes the drawer, if it's open it calls the superclass of {@link FragmentActivity}
      */
     @Override
     public void onBackPressed() {
@@ -87,7 +87,7 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     * Opens the drawer, if the drawer is already open it closes it.
+     * Opens the drawer, if it's already open it closes it.
      */
     private void openCloseDrawer() {
         if (drawer.isDrawerOpen(START)) drawer.closeDrawer(START);
@@ -95,7 +95,7 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     * Replaces the fragment with another activity.
+     * Replaces the fragment with the flContainerNavigationMenu activity.
      */
     public void replaceNavigationFragment() {
         getSupportFragmentManager()
@@ -149,7 +149,7 @@ public class NavigationActivity extends AppCompatActivity {
 
     /**
      * Replaces the fragment with another activity. It receives the fragment that wants to be
-     * used and then string for the title.
+     * used and then string for the title. To end it closes the navigation drawer.
      *
      * @param fragment The activity to be replace the fragment.
      * @param tag      The new title of the toolbar.
