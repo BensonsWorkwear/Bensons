@@ -149,7 +149,7 @@ public class NavigationActivity extends AppCompatActivity {
 
     /**
      * Replaces the fragment with another activity. It receives the fragment that wants to be
-     * used and then string for the title. To end it closes the navigation drawer.
+     * used and then string for the title. To end it closes the navigation drawer activity
      *
      * @param fragment The activity to be replace the fragment.
      * @param tag      The new title of the toolbar.
@@ -165,7 +165,7 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     * Sets the title on the toolbar of the activity. Receives a title of the type String
+     * Sets the title on the toolbar of the activity. Receives a title of the type {@link String}
      * and replaces the current title.
      *
      * @param title The String to be set as the title of the activity.

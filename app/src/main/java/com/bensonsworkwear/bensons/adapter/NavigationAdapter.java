@@ -25,7 +25,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     private INavigation listener;
 
     /**
-     *
+     * Initializes the Arraylist and sets the listener.
      *
      * @param listener {@link INavigation} listener
      */
@@ -54,9 +54,9 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         }
 
         /**
-         * {@link ViewHolder}
+         * {@link ViewHolder} describes an item view and metadata about its place within the RecyclerView.
          *
-         * @param itemView
+         * @param itemView Current view.
          */
         private ViewHolder(View itemView) {
             super(itemView);
@@ -76,10 +76,11 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     }
 
     /**
-     * TODO Esto puede estar escrito bastante mejor
+     * TODO Esto puede estar escrito bastante mejor. No estoy seguro de que hace ni que se llegue a utilizar.
+     * I don't think this is used anywhere. I won't delete it until i know what it does.
      *
-     * @param parent The parent of the {@link ViewGroup}
-     * @param viewType
+     * @param parent   The parent of the {@link ViewGroup}
+     * @param viewType Type of the view
      * @return The {@link NavigationAdapter} {@link ViewHolder} @link ItemView}
      */
     @NonNull
@@ -92,10 +93,10 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     }
 
     /**
+     * Describes an item view and metadata about its place within the {@link RecyclerView}
      *
-     *
-     * @param holder
-     * @param position Position
+     * @param holder   The {@link ViewHolder} to
+     * @param position Position in the {@link RecyclerView}
      */
     @Override
     public void onBindViewHolder(@NonNull NavigationAdapter.ViewHolder holder, int position) {

@@ -12,7 +12,7 @@ public interface INavigation {
 
     /**
      * Interface for the selected image in the Navigation Drawer.
-     * The position is the index number of the selected element in the navigation drawer.
+     * The position is the index number of the selected element in the Navigation Drawer.
      *
      * @param position Position of the pressed image
      */
