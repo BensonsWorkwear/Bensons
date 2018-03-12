@@ -39,6 +39,9 @@ public class NavigationActivity extends AppCompatActivity {
     @BindView(R.id.toolbar_tvTitle)
     TextView tvTitle;
 
+    /**
+     * No being used currently
+     */
     @OnClick(R.id.toolbar_ivNavigation)
     void onClickNavigation() {
         openCloseDrawer();
@@ -113,7 +116,7 @@ public class NavigationActivity extends AppCompatActivity {
         String tag = null;
 
         /* Parameter comes from the element pressed in the navigation drawer.
-        * Pressing the first one will give the value 0 which means that the user
+        * Pressing the first one will give the value 0, which means that the user
         * wants to go to the news section
         */
         switch (position) {
@@ -168,7 +171,7 @@ public class NavigationActivity extends AppCompatActivity {
      * Sets the title on the toolbar of the activity. Receives a title of the type {@link String}
      * and replaces the current title.
      *
-     * @param title The String to be set as the title of the activity.
+     * @param title The {@link String} to be set as the title of the activity.
      */
     public void setToolbarTitle(String title) {
         tvTitle.setText(title);
