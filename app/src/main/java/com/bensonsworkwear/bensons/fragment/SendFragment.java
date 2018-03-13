@@ -12,20 +12,19 @@ import com.bensonsworkwear.bensons.R;
 
 import butterknife.ButterKnife;
 
-public class PopularTagsFragment extends Fragment {
+public class SendFragment extends Fragment {
 
-    public static PopularTagsFragment newInstance() {
-        return new PopularTagsFragment();
+    public static SendFragment newInstance() {
+        return new SendFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_popular_tags, container, false);
+        View view = inflater.inflate(R.layout.fragment_send, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
-
 
 }
 

@@ -14,12 +14,11 @@ import android.widget.TextView;
 
 import com.bensonsworkwear.bensons.constants.Constants;
 import com.bensonsworkwear.bensons.fragment.AboutFragment;
-import com.bensonsworkwear.bensons.fragment.FeedsFragment;
+import com.bensonsworkwear.bensons.fragment.BaseFragment;
 import com.bensonsworkwear.bensons.fragment.NavigationFragment;
-import com.bensonsworkwear.bensons.fragment.NewsFragment;
-import com.bensonsworkwear.bensons.fragment.PopularTagsFragment;
-import com.bensonsworkwear.bensons.fragment.SettingsFragment;
-import com.bensonsworkwear.bensons.fragment.WatchLiveFragment;
+import com.bensonsworkwear.bensons.fragment.ElementFragment;
+import com.bensonsworkwear.bensons.fragment.SendFragment;
+import com.bensonsworkwear.bensons.fragment.Create_Pdf_Fragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -122,26 +121,22 @@ public class NavigationActivity extends AppCompatActivity {
         */
         switch (position) {
             case 0:
-                fragment = NewsFragment.newInstance();
-                tag = Constants.TAG_FRG_NEWS;
+                fragment = BaseFragment.newInstance();
+                tag = Constants.TAG_FRG_BASE;
                 break;
             case 1:
-                fragment = FeedsFragment.newInstance();
-                tag = Constants.TAG_FRG_FEEDS;
+                fragment = ElementFragment.newInstance();
+                tag = Constants.TAG_FRG_ELEMENT;
                 break;
             case 2:
-                fragment = WatchLiveFragment.newInstance();
-                tag = Constants.TAG_FRG_WATCH_LIVE;
+                fragment = Create_Pdf_Fragment.newInstance();
+                tag = Constants.TAG_FRG_CREATE_PDF;
                 break;
             case 3:
-                fragment = PopularTagsFragment.newInstance();
-                tag = Constants.TAG_FRG_POPULAR_TAGS;
+                fragment = SendFragment.newInstance();
+                tag = Constants.TAG_FRG_SEND;
                 break;
             case 4:
-                fragment = SettingsFragment.newInstance();
-                tag = Constants.TAG_FRG_SETTINGS;
-                break;
-            case 5:
                 fragment = AboutFragment.newInstance();
                 tag = Constants.TAG_FRG_ABOUT;
                 break;

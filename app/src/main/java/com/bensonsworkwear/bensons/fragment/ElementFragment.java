@@ -13,18 +13,18 @@ import com.bensonsworkwear.bensons.R;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class FeedsFragment extends Fragment {
+public class ElementFragment extends Fragment {
 
     private Unbinder unbinder;
 
-    public static FeedsFragment newInstance() {
-        return new FeedsFragment();
+    public static ElementFragment newInstance() {
+        return new ElementFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_feeds, container, false);
+        View view = inflater.inflate(R.layout.fragment_element, container, false);
         unbinder = ButterKnife.bind(this, view);
         return view;
     }

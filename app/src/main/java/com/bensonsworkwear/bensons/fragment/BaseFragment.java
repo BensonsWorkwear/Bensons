@@ -12,19 +12,18 @@ import com.bensonsworkwear.bensons.R;
 
 import butterknife.ButterKnife;
 
-public class SettingsFragment extends Fragment {
+public class BaseFragment extends Fragment {
 
-    public static SettingsFragment newInstance() {
-        return new SettingsFragment();
+    public static BaseFragment newInstance() {
+        return new BaseFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        View view = inflater.inflate(R.layout.fragment_base, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
 
 }
-
