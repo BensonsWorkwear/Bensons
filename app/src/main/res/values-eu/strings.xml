@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Bensons</string>
     <string name="menu_send">Bidali</string>
     <string name="menu_create_pdf">PDF-a sortu</string>
     <string name="title_navigation_activity">Nabigazioa</string>

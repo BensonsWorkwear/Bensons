@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bensons</string>
+    <string name="app_name" translatable="false">Bensons</string>
     <string name="title_navigation_activity">Editor</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -27,5 +27,4 @@
     <string name="menu_about">About</string>
     <string name="title">Title</string>
     <string name="menu_button">menu_button</string>
-    <string name="title_navigation_activity">Navigation</string>
 </resources>
