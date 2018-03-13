@@ -73,6 +73,7 @@ public class NavigationActivity extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //The first fragment is selected by default
         replaceFragment(0);
         replaceNavigationFragment();
     }
