@@ -57,7 +57,7 @@ public class NavigationFragment extends Fragment implements INavigation {
     /**
      * Runs when the view is created. Attaches the view to the root of the container.
      *
-     * @param inflater
+     * @param inflater The inflater of the layout.
      * @param container An object that provides a set of LayoutParams values for root of the returned hierarchy.
      * @param savedInstanceState State of the application bundle.
      * @return The root View of the inflated hierarchy. It is the root of the inflated XML file.
