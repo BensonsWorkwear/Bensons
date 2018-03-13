@@ -32,11 +32,21 @@ public class NavigationFragment extends Fragment implements INavigation {
 
     private int array_icons[] = {R.drawable.icon_menu_news, R.drawable.icon_menu_feeds, R.drawable.icon_menu_watchlive, R.drawable.icon_menu_popular_tags, R.drawable.icon_menu_settings, R.drawable.icon_menu_about};
 
+    /**
+     * Runs when the activity is launched. The first time savedInstanceState is null.
+     *
+     * @param savedInstanceState State of the application bundle.
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
+    /**
+     * Creates a new navigation fragment. This navigatin fragment has a new bundle a an argument.
+     *
+     * @return A new navigation fragment.
+     */
     public static NavigationFragment newInstance() {
         NavigationFragment navigationFragment = new NavigationFragment();
         Bundle args = new Bundle();
@@ -44,6 +54,14 @@ public class NavigationFragment extends Fragment implements INavigation {
         return navigationFragment;
     }
 
+    /**
+     * Runs when the view is created. Attaches the view to the root of the container.
+     *
+     * @param inflater
+     * @param container An object that provides a set of LayoutParams values for root of the returned hierarchy.
+     * @param savedInstanceState State of the application bundle.
+     * @return The root View of the inflated hierarchy. It is the root of the inflated XML file.
+     */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container,
@@ -56,6 +74,11 @@ public class NavigationFragment extends Fragment implements INavigation {
         return view;
     }
 
+    /**
+     * Fill the navigation drawer with the fragments. Sets all the drawers for each fragment bu getting their name and navigation from the array in Strings.xml.
+     * <p>Inserts into an {@link ArrayList} all the navigationData of the fragments. </p>
+     * @return An {@link ArrayList} of the fragments.
+     */
     private ArrayList<com.bensonsworkwear.bensons.model.NavigationData> fillData() {
         ArrayList<com.bensonsworkwear.bensons.model.NavigationData> navigationDataArrayList = new ArrayList<>();
         String array_navigation[] = getResources().getStringArray(R.array.array_navigation);
@@ -70,6 +93,9 @@ public class NavigationFragment extends Fragment implements INavigation {
         return navigationDataArrayList;
     }
 
+    /**
+     * Sets the {@link NavigationAdapter}.
+     */
     private void setAdapter() {
         adapter = new NavigationAdapter(this);
         rvNavigation.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -78,18 +104,33 @@ public class NavigationFragment extends Fragment implements INavigation {
         adapter.refreshAdapter(fillData());
     }
 
+    /**
+     * Replaces the fragment with the position of the parameter. It also prints to logcat the view and it's position.
+     *
+     * @param position Position of the fragment.
+     */
     @Override
     public void onViewClick(int position) {
         Log.e(TAG, "View" + position);
         replaceFragment(position);
     }
 
+    /**
+     * Replaces the fragment with the position of the parameter. It also prints to logcat the icon and it's position.
+     *
+     * @param position Position of the pressed image.
+     */
     @Override
     public void onIconClick(int position) {
         Log.e(TAG, "Icon" + position);
         replaceFragment(position);
     }
 
+    /**
+     * Replaces the fragment with the passed parameter. If the activiy is null it doesn't do anything.
+     *
+     * @param position Position of the fragment.
+     */
     private void replaceFragment(int position) {
         assert (getActivity()) != null;
         ((NavigationActivity) getActivity()).replaceFragment(position);
