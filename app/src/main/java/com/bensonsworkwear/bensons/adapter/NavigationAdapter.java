@@ -21,7 +21,7 @@ import butterknife.OnClick;
 
 public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.ViewHolder> {
 
-    private List<NavigationData> navigationDatas;
+    private List<NavigationData> navigationData;
     private INavigation listener;
 
     /**
@@ -30,7 +30,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
      * @param listener {@link INavigation} listener
      */
     public NavigationAdapter(INavigation listener) {
-        navigationDatas = new ArrayList<>();
+        navigationData = new ArrayList<>();
         this.listener = listener;
     }
 
@@ -100,7 +100,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
      */
     @Override
     public void onBindViewHolder(@NonNull NavigationAdapter.ViewHolder holder, int position) {
-        NavigationData navigationData = navigationDatas.get(position);
+        NavigationData navigationData = this.navigationData.get(position);
         if (holder.tvNavigationName != null) {
             holder.tvNavigationName.setText(navigationData.getName());
         }
@@ -120,7 +120,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
      */
     @Override
     public int getItemCount() {
-        return navigationDatas.size();
+        return navigationData.size();
     }
 
     /**
@@ -129,8 +129,8 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
      * @param data Navigation data {@link ArrayList}.
      */
     public void refreshAdapter(ArrayList<NavigationData> data) {
-        navigationDatas.clear();
-        navigationDatas.addAll(data);
+        navigationData.clear();
+        navigationData.addAll(data);
         notifyDataSetChanged();
     }
 
@@ -140,8 +140,8 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
      * @param position Selected position.
      */
     public void setSelected(int position) {
-        for (int i = 0; i < navigationDatas.size(); i++) {
-            navigationDatas.get(i).setSelected(i == position);
+        for (int i = 0; i < navigationData.size(); i++) {
+            navigationData.get(i).setSelected(i == position);
         }
 
         notifyDataSetChanged();
