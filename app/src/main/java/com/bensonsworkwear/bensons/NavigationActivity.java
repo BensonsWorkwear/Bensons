@@ -1,5 +1,6 @@
 package com.bensonsworkwear.bensons;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -19,6 +20,7 @@ import com.bensonsworkwear.bensons.fragment.NavigationFragment;
 import com.bensonsworkwear.bensons.fragment.ElementFragment;
 import com.bensonsworkwear.bensons.fragment.SendFragment;
 import com.bensonsworkwear.bensons.fragment.Create_Pdf_Fragment;
+import com.bensonsworkwear.bensons.fragment.TestFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -139,6 +141,14 @@ public class NavigationActivity extends AppCompatActivity {
             case 4:
                 fragment = AboutFragment.newInstance();
                 tag = Constants.TAG_FRG_ABOUT;
+                break;
+            case 5:
+                Intent intent = new Intent(this, TestFragment.class);
+                this.startActivity(intent);
+                break;
+            default:
+                fragment = BaseFragment.newInstance();
+                tag = Constants.TAG_FRG_BASE;
                 break;
         }
 
