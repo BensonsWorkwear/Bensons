@@ -33,9 +33,15 @@ dependencies {
 
     /*
     * Import for the Butterknife plugin
-    * I case of a new version replace the numbers at the end with the newest version
+    * In case of a new version replace the numbers at the end with the newest version
     * Github page: https://github.com/JakeWharton/butterknife/releases
     */
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /*
+    * Import for the PhotoView plugin
+    * Update page: https://jitpack.io/#chrisbanes/PhotoView
+    */
+    compile 'com.github.chrisbanes:PhotoView:2.1.3'
 }
