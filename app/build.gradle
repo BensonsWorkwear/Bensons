@@ -32,6 +32,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     /*
+    * Check the wiki for more information about the plugins:
+    * https://github.com/BensonsWorkwear/Bensons/wiki
+    */
+
+    /*
     * Import for the Butterknife plugin
     * In case of a new version replace the numbers at the end with the newest version
     * Github page: https://github.com/JakeWharton/butterknife/releases
