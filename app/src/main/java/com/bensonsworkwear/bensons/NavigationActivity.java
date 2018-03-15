@@ -154,10 +154,6 @@ public class NavigationActivity extends AppCompatActivity {
                 fragment = BaseFragment.newInstance();
                 tag = Constants.TAG_FRG_BASE;
                 break;
-            default:
-                fragment = BaseFragment.newInstance();
-                tag = Constants.TAG_FRG_BASE;
-                break;
         }
 
         replaceFragment(fragment, tag);
