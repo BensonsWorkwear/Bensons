@@ -145,6 +145,14 @@ public class NavigationActivity extends AppCompatActivity {
             case 5:
                 Intent intent = new Intent(this, TestFragment.class);
                 this.startActivity(intent);
+
+                /*
+                * The app tries to change fragments and then changes activity
+                * but it crashes because there is no fragment or tag and then
+                * opens the activity.
+                */
+                fragment = BaseFragment.newInstance();
+                tag = Constants.TAG_FRG_BASE;
                 break;
             default:
                 fragment = BaseFragment.newInstance();
