@@ -24,12 +24,12 @@ public class Selection extends AppCompatActivity {
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+    protected SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    private ViewPager mViewPager;
+    protected ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

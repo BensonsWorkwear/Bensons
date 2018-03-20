@@ -21,7 +21,6 @@ import com.bensonsworkwear.bensons.fragment.ElementFragment;
 import com.bensonsworkwear.bensons.fragment.Selection;
 import com.bensonsworkwear.bensons.fragment.SendFragment;
 import com.bensonsworkwear.bensons.fragment.Create_Pdf_Fragment;
-import com.bensonsworkwear.bensons.fragment.Selection;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
