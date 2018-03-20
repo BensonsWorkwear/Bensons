@@ -20,6 +20,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    /*
+    * A script that allows to have folders inside the layout folder for better management.
+    * You can't declare a container resource folder before you declare that folder's child resource folders.
+    */
+
+    /*
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/layouts_category2',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
+    */
 }
 
 dependencies {

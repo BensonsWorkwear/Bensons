@@ -16,9 +16,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fragment.TestFragment"
-            android:label="@string/title_activity_test_fragment"
-            android:theme="@style/AppTheme"></activity>
+            android:name=".fragment.Selection"
+            android:label="@string/title_activity_selection"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
