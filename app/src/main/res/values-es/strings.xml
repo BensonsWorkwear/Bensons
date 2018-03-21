@@ -10,4 +10,6 @@
     <string name="menu_about">Información</string>
     <string name="title">Titulo</string>
     <string name="menu_button">boton_menu</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="title_activity_selection">Selección</string>
 </resources>

@@ -32,7 +32,16 @@
 
     <string name="menu_test"> Test</string>
     <string name="title_activity_selection">Selection</string>
-    <string name="tab_text_1" translatable="false">Tab 1</string>
-    <string name="tab_text_2" translatable="false">Tab 2</string>
-    <string name="tab_text_3" translatable="false">Tab 3</string>
+    <string name="tab_text_1">Basic</string>
+    <string name="tab_text_2">Colour</string>
+    <string name="tab_text_3">Materials</string>
+
+    <string-array name="sizes">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>S</item>
+        <item>XXL</item>
+        <item>XXXL</item>
+    </string-array>
 </resources>
