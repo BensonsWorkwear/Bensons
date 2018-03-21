@@ -91,7 +91,7 @@ public class Selection extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             // getItem is called to return the current page.
-            switch(position){
+            switch (position) {
                 case 0:
                     return new Tab1();
                 case 1:
@@ -109,10 +109,12 @@ public class Selection extends AppCompatActivity {
             return 3;
         }
 
+        /*
+        //Doesn't work. It should change the name of the tabs
         @Override
-        public CharSequence getPageTitle(int position){
+        public CharSequence getPageTitle(int position) {
             //Returns the name of the title based on the position
-            switch(position){
+            switch (position) {
                 case 0:
                     return "Tabla 1";
                 case 1:
@@ -121,7 +123,9 @@ public class Selection extends AppCompatActivity {
                     return "Tabla 3";
                 default:
                     return null;
+
             }
         }
+        */
     }
 }
