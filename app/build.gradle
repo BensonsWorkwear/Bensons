@@ -55,9 +55,9 @@ dependencies {
     */
 
     /*
-    * Import for the Butterknife plugin
+    * Import for the ButterKnife plugin
     * In case of a new version replace the numbers at the end with the newest version
-    * Github page: https://github.com/JakeWharton/butterknife/releases
+    * GitHub page: https://github.com/JakeWharton/butterknife/releases
     */
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
@@ -67,4 +67,10 @@ dependencies {
     * Update page: https://jitpack.io/#chrisbanes/PhotoView
     */
     compile 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    /*
+    * Import for the Android Material Color Picker Dialog plugin
+    * To update check the GitHub page: https://github.com/Pes8/android-material-color-picker-dialog
+    */
+    compile 'com.pes.materialcolorpicker:library:1.2.0'
 }
