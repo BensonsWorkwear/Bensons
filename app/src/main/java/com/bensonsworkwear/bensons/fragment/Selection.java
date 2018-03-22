@@ -1,5 +1,7 @@
 package com.bensonsworkwear.bensons.fragment;
 
+import android.graphics.Color;
+import android.support.annotation.ColorInt;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,12 +11,17 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.bensonsworkwear.bensons.R;
+import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
+import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
 
 public class Selection extends AppCompatActivity {
+
+    ColorPicker cp;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -51,8 +58,27 @@ public class Selection extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
-    }
+        cp = new ColorPicker(this, 255, 255, 255, 255);
 
+        /* Set a new Listener called when user click "select" */
+        cp.setCallback(new ColorPickerCallback() {
+
+            @Override
+            public void onColorChosen(@ColorInt int color) {
+                // Do whatever you want
+                // Examples
+                Log.d("Alpha", Integer.toString(Color.alpha(color)));
+                Log.d("Red", Integer.toString(Color.red(color)));
+                Log.d("Green", Integer.toString(Color.green(color)));
+                Log.d("Blue", Integer.toString(Color.blue(color)));
+
+                Log.d("Pure Hex", Integer.toHexString(color));
+                Log.d("#Hex no alpha", String.format("#%06X", (0xFFFFFF & color)));
+                Log.d("#Hex with alpha", String.format("#%08X", (color)));
+            }
+        });
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -95,6 +121,8 @@ public class Selection extends AppCompatActivity {
                 case 0:
                     return new Tab1();
                 case 1:
+                    /* Show color picker dialog */
+                    cp.show(); //TODO: Llamar a esta funcion desde el botón.
                     return new Tab2();
                 case 2:
                     return new Tab3();
@@ -123,7 +151,6 @@ public class Selection extends AppCompatActivity {
                     return "Tabla 3";
                 default:
                     return null;
-
             }
         }
         */
