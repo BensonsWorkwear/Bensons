@@ -110,7 +110,7 @@ public class Selection extends AppCompatActivity {
         }
 
         /*
-        //Doesn't work. It should change the name of the tabs
+        //It should change the name of the tabs but it doesn't work.
         @Override
         public CharSequence getPageTitle(int position) {
             //Returns the name of the title based on the position
