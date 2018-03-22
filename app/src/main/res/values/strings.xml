@@ -38,13 +38,13 @@
     <string name="cotton">Cotton</string>
     <string name="wool">Wool</string>
     <string name="woven">Woven</string>
-    <string name="polyester">Polyester</string>
-    <string name="softshell">SoftShell</string>
+    <string name="polyester" translatable="false">Polyester</string>
+    <string name="softshell" translatable="false">SoftShell</string>
     <string name="other">Other</string>
     <string name="finish">Finish</string>
     <string name="additional_notes">Additional notes:</string>
     <string name="cuantity">Cuantity</string>
-    <string name="min_300">Min. 300</string>
+    <string name="min_300" translatable="false">Min. 300</string>
     <string name="size">Size</string>
     <string name="round_neck">Round Neck</string>
     <string name="preview">Preview</string>

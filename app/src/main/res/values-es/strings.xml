@@ -15,4 +15,16 @@
     <string name="tab_text_2">Color</string>
     <string name="tab_text_1">Basico</string>
     <string name="tab_text_3">Materiales</string>
+    <string name="cotton">Algodón</string>
+    <string name="wool">Lana</string>
+    <string name="size">Tamaño</string>
+    <string name="cuantity">Cantidad</string>
+    <string name="additional_notes">Notas adicionales:</string>
+    <string name="finish">Finalizar</string>
+    <string name="other">Otro</string>
+    <string name="woven">Tejido</string>
+    <string name="round_neck">Cuello redondo</string>
+    <string name="preview">Previsualizar</string>
+    <string name="select_colour">Seleccionar color</string>
+    <string name="material">Material</string>
 </resources>
