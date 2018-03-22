@@ -10,7 +10,7 @@
         android:id="@+id/editText1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="98dp"
+        android:layout_marginBottom="90dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:ems="10"
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cotton"
+            android:text="@string/cotton"
             tools:layout_editor_absoluteX="96dp"
             tools:layout_editor_absoluteY="6dp" />
 
@@ -59,28 +59,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Wool" />
+            android:text="@string/wool" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Woven" />
+            android:text="@string/woven" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Polyester" />
+            android:text="@string/polyester" />
 
         <RadioButton
             android:id="@+id/radioButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="SoftShell" />
+            android:text="@string/softshell" />
 
         <RadioButton
             android:id="@+id/radioButton6"
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Other"
+            android:hint="@string/other"
             android:inputType="text|textCapWords|textAutoCorrect|textAutoComplete|textShortMessage"
             android:textSize="18sp" />
     </RadioGroup>
@@ -105,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
         android:layout_marginEnd="17dp"
-        android:text="Finish"
+        android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="16dp"
-        android:text="Additional notes:"
+        android:text="@string/additional_notes"
         app:layout_constraintBottom_toTopOf="@+id/editText1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Cuantity"
+        android:text="@string/cuantity"
         app:layout_constraintBottom_toTopOf="@+id/editText3"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:ems="10"
-        android:hint="Min. 300"
+        android:hint="@string/min_300"
         android:inputType="number"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
