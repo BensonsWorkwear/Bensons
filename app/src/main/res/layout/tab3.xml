@@ -28,7 +28,7 @@
         android:layout_marginBottom="11dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
-        android:text="Material"
+        android:text="@string/material"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

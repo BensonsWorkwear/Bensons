@@ -49,6 +49,7 @@
     <string name="round_neck">Round Neck</string>
     <string name="preview">Preview</string>
     <string name="select_colour">Select colour</string>
+    <string name="material">Material</string>
 
     <string-array name="sizes">
         <item>S</item>
