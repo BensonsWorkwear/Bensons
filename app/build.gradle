@@ -73,4 +73,10 @@ dependencies {
     * To update check the GitHub page: https://github.com/Pes8/android-material-color-picker-dialog
     */
     compile 'com.pes.materialcolorpicker:library:1.2.0'
+
+    /*
+    * Import for the ShowcaseView plugin
+    * To update check the GitHub page: https://github.com/amlcurran/ShowcaseView
+    */
+    compile 'com.github.amlcurran.showcaseview:library:5.4.3'
 }
