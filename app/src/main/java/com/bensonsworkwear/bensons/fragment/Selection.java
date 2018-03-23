@@ -102,7 +102,7 @@ public class Selection extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Deleted placeHolderFragent class was deleted from here
+    //Deleted placeHolderFragment class was deleted from here
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
