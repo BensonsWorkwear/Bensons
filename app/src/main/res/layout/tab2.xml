@@ -7,37 +7,37 @@
     tools:layout_editor_absoluteY="25dp">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_preview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:text="@string/preview"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/preview_image"
+        app:layout_constraintStart_toStartOf="@+id/preview_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/pick_colour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="146dp"
-        android:text="@string/select_colour"
+        android:text="@string/pick_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/preview_image" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/preview_image"
         android:layout_width="222dp"
         android:layout_height="0dp"
         android:layout_marginBottom="26dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:contentDescription="@string/preview"
+        app:layout_constraintBottom_toTopOf="@+id/pick_colour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:contentDescription="@string/preview" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_preview"
+        app:srcCompat="@mipmap/ic_launcher" />
 </android.support.constraint.ConstraintLayout>
