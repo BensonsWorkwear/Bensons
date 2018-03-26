@@ -25,7 +25,7 @@
     <string name="size">Size</string>
     <string name="round_neck">Round Neck</string>
     <string name="preview">Preview</string>
-    <string name="select_colour">Select colour</string>
     <string name="material">Material</string>
     <string name="hood">Hood</string>
+    <string name="pick_colour">Pick colour</string>
 </resources>

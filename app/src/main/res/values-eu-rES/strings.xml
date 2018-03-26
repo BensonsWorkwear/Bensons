@@ -16,7 +16,6 @@
     <string name="tab_text_3">Materiala</string>
     <string name="tab_text_1">Basikoa</string>
     <string name="material">Materiala</string>
-    <string name="select_colour">Colorea autatu</string>
     <string name="preview">Aureikusi</string>
     <string name="round_neck">Lepo inguruan</string>
     <string name="size">Tamaina</string>
@@ -28,4 +27,5 @@
     <string name="additional_notes">Ohar gehigarriak:</string>
     <string name="cuantity">Kantitatea</string>
     <string name="hood">Txanoa</string>
+    <string name="pick_colour">Colorea autatu</string>
 </resources>
