@@ -81,7 +81,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
      *
      * @param parent   The parent of the {@link ViewGroup}
      * @param viewType Type of the view
-     * @return The {@link NavigationAdapter} {@link ViewHolder} @link ItemView}
+     * @return The {@link NavigationAdapter} ViewHolder @link ItemView}
      */
     @NonNull
     @Override
@@ -95,7 +95,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     /**
      * Describes an item view and metadata about its place within the {@link RecyclerView}
      *
-     * @param holder   The {@link ViewHolder} to
+     * @param holder   The ViewHolder
      * @param position Position in the {@link RecyclerView}
      */
     @Override

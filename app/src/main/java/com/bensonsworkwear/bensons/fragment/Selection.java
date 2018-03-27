@@ -16,8 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.bensonsworkwear.bensons.R;
-import com.github.amlcurran.showcaseview.ShowcaseView;
-import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
 
@@ -130,8 +128,6 @@ public class Selection extends AppCompatActivity {
                 case 0:
                     return new Tab1();
                 case 1:
-                    /* Show color picker dialog */
-                    cp.show(); //TODO: Llamar a esta funcion desde el botón.
                     return new Tab2();
                 case 2:
                     return new Tab3();
