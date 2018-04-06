@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_navigation_activity">Navegación</string>
+    <string name="navigation_drawer_open">Abrir cajón de navegador</string>
+    <string name="navigation_drawer_close">Cerrar cajón de navegador</string>
+    <string name="menu_base">Base</string>
+    <string name="menu_element">Elemento</string>
+    <string name="menu_create_pdf">Crear PDF</string>
+    <string name="menu_send">Enviar</string>
+    <string name="menu_about">Información</string>
+    <string name="title">Titulo</string>
+    <string name="menu_button">boton_menu</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="title_activity_selection">Selección</string>
+    <string name="tab_text_2">Color</string>
+    <string name="tab_text_1">Basico</string>
+    <string name="tab_text_3">Materiales</string>
+    <string name="cotton">Algodón</string>
+    <string name="wool">Lana</string>
+    <string name="size">Tamaño</string>
+    <string name="cuantity">Cantidad</string>
+    <string name="additional_notes">Notas adicionales:</string>
+    <string name="finish">Finalizar</string>
+    <string name="other">Otro</string>
+    <string name="woven">Tejido</string>
+    <string name="round_neck">Cuello redondo</string>
+    <string name="preview">Previsualizar</string>
+    <string name="material">Material</string>
+    <string name="hood">Capucha</string>
+    <string name="pick_colour">Seleccionar color</string>
+</resources>
