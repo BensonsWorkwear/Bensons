@@ -25,7 +25,17 @@
     <string name="other">Beste</string>
     <string name="finish">Bukatu</string>
     <string name="additional_notes">Ohar gehigarriak:</string>
-    <string name="cuantity">Kantitatea</string>
+    <string name="quantity">Kantitatea</string>
     <string name="hood">Txanoa</string>
     <string name="pick_colour">Colorea autatu</string>
+    <string name="upload">Igo</string>
+    <string name="skip">Saltatu</string>
+    <string name="send">Bidali</string>
+    <string name="cap">Txano</string>
+    <string name="jacket">Jaka</string>
+    <string name="t_shirt">Kamiseta</string>
+    <string name="trousers">Galtza</string>
+    <string name="print">Imprimatu</string>
+    <string name="vest">Txalekoa</string>
+    <string name="embroidery">Bordadua</string>
 </resources>

@@ -18,7 +18,7 @@
     <string name="cotton">Algodón</string>
     <string name="wool">Lana</string>
     <string name="size">Tamaño</string>
-    <string name="cuantity">Cantidad</string>
+    <string name="quantity">Cantidad</string>
     <string name="additional_notes">Notas adicionales:</string>
     <string name="finish">Finalizar</string>
     <string name="other">Otro</string>
@@ -28,4 +28,14 @@
     <string name="material">Material</string>
     <string name="hood">Capucha</string>
     <string name="pick_colour">Seleccionar color</string>
+    <string name="upload">Subir</string>
+    <string name="skip">Saltar</string>
+    <string name="send">Enviar</string>
+    <string name="cap">Gorra</string>
+    <string name="jacket">Chaqueta</string>
+    <string name="t_shirt">Camiseta</string>
+    <string name="trousers">Pantalones</string>
+    <string name="vest">Chaleco</string>
+    <string name="embroidery">Bordado</string>
+    <string name="print">Estampado</string>
 </resources>
