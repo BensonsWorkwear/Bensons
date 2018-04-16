@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="18dp"
         android:layout_marginStart="16dp"
-        android:text="@string/cuantity"
+        android:text="@string/quantity"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/cuantity"
         app:layout_constraintStart_toStartOf="parent"

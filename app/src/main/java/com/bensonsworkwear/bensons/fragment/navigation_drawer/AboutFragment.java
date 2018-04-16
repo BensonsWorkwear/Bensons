@@ -1,4 +1,4 @@
-package com.bensonsworkwear.bensons.fragment;
+package com.bensonsworkwear.bensons.fragment.navigation_drawer;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,19 +12,18 @@ import com.bensonsworkwear.bensons.R;
 
 import butterknife.ButterKnife;
 
-public class SendFragment extends Fragment {
+public class AboutFragment extends Fragment {
 
-    public static SendFragment newInstance() {
-        return new SendFragment();
+    public static AboutFragment newInstance() {
+        return new AboutFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_send, container, false);
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
 
 }
-

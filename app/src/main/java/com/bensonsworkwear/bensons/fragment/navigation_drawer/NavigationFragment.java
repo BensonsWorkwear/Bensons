@@ -1,4 +1,4 @@
-package com.bensonsworkwear.bensons.fragment;
+package com.bensonsworkwear.bensons.fragment.navigation_drawer;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -1,4 +1,4 @@
-package com.bensonsworkwear.bensons.fragment;
+package com.bensonsworkwear.bensons.fragment.navigation_drawer;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,16 +12,16 @@ import com.bensonsworkwear.bensons.R;
 
 import butterknife.ButterKnife;
 
-public class Create_Pdf_Fragment extends Fragment {
+public class SendFragment extends Fragment {
 
-    public static Create_Pdf_Fragment newInstance() {
-        return new Create_Pdf_Fragment();
+    public static SendFragment newInstance() {
+        return new SendFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_create_pdf, container, false);
+        View view = inflater.inflate(R.layout.fragment_send, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
