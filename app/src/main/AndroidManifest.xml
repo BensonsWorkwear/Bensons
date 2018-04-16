@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bensonsworkwear.bensons">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_2fc0f90a4a2557743872ad1244282fa0"
@@ -16,9 +18,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fragment.Selection"
+            android:name=".selection.Selection"
             android:label="@string/title_activity_selection"
             android:theme="@style/AppTheme" />
+        <activity android:name=".fragment.tabs.PrintFragment" />
+        <activity android:name=".fragment.tabs.JacketFragment" />
+        <activity android:name=".fragment.tabs.TShirtFragment" />
+        <activity android:name=".fragment.tabs.MaterialFragment" />
+        <activity android:name=".fragment.tabs.CapFragment" />
+        <activity android:name=".fragment.GarmentFragment" />
+        <activity android:name=".fragment.PackagingFragment" />
     </application>
 
 </manifest>
