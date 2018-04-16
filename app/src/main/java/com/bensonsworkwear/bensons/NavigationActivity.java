@@ -14,13 +14,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bensonsworkwear.bensons.constants.Constants;
-import com.bensonsworkwear.bensons.fragment.AboutFragment;
-import com.bensonsworkwear.bensons.fragment.BaseFragment;
-import com.bensonsworkwear.bensons.fragment.NavigationFragment;
-import com.bensonsworkwear.bensons.fragment.ElementFragment;
-import com.bensonsworkwear.bensons.fragment.Selection;
-import com.bensonsworkwear.bensons.fragment.SendFragment;
-import com.bensonsworkwear.bensons.fragment.Create_Pdf_Fragment;
+import com.bensonsworkwear.bensons.fragment.navigation_drawer.AboutFragment;
+import com.bensonsworkwear.bensons.fragment.navigation_drawer.BaseFragment;
+import com.bensonsworkwear.bensons.fragment.navigation_drawer.NavigationFragment;
+import com.bensonsworkwear.bensons.fragment.navigation_drawer.ElementFragment;
+import com.bensonsworkwear.bensons.selection.Selection;
+import com.bensonsworkwear.bensons.fragment.navigation_drawer.SendFragment;
+import com.bensonsworkwear.bensons.fragment.navigation_drawer.Create_Pdf_Fragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
