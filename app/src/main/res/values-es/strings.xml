@@ -38,4 +38,13 @@
     <string name="vest">Chaleco</string>
     <string name="embroidery">Bordado</string>
     <string name="print">Estampado</string>
+    <string name="zip">Cremallera</string>
+    <string name="water_proof">Impermeable</string>
+    <string name="name">Nombre:</string>
+    <string name="type">Tipo:</string>
+    <string name="name_of_the_garment">Nombre de la prenda</string>
+    <string name="preview_of_the_logo">Previsualización del logo</string>
+    <string name="select_you_packaging_logo">Selecciona el logo del paquete</string>
+    <string name="n_pokets">N. Bolsillos</string>
+    <string name="fire_retardant">Ignífugo</string>
 </resources>

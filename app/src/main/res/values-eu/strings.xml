@@ -38,4 +38,13 @@
     <string name="print">Imprimatu</string>
     <string name="vest">Txalekoa</string>
     <string name="embroidery">Bordadua</string>
+    <string name="water_proof">Iragazgaitza</string>
+    <string name="fire_retardant">Su atzeratzailea</string>
+    <string name="zip">Kremailera</string>
+    <string name="n_pokets">Potxiko kopurua</string>
+    <string name="select_you_packaging_logo">Aukeratu zure paketeko logoa</string>
+    <string name="preview_of_the_logo">Logoaren aurreikuspena</string>
+    <string name="type">Mota</string>
+    <string name="name">Izena:</string>
+    <string name="name_of_the_garment">Arroparen izena</string>
 </resources>
