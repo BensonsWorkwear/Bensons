@@ -7,102 +7,103 @@
     tools:context=".fragment.tabs.JacketFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_pokets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:layout_marginTop="88dp"
-        android:text="N. Pokets"
+        android:text="@string/n_pokets"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/et_pokets"
         android:layout_width="69dp"
         android:layout_height="25dp"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="27dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintBottom_toTopOf="@+id/cb_rem_sleeves"
+        app:layout_constraintStart_toStartOf="@+id/tv_pokets"
+        app:layout_constraintTop_toTopOf="@+id/tv_pokets"
+        tools:ignore="LabelFor" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cb_rem_sleeves"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
-        android:text="Removable sleeves"
-        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox2"
+        android:text="@string/removable_sleeves"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cb_water_proof"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/cb_water_proof"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
         android:layout_marginTop="170dp"
-        android:text="Water proof"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        android:text="@string/water_proof"
+        app:layout_constraintStart_toEndOf="@+id/cb_rem_sleeves"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/cb_hood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Hood"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        android:text="@string/hood"
+        app:layout_constraintStart_toStartOf="@+id/cb_rem_sleeves"
+        app:layout_constraintTop_toBottomOf="@+id/cb_rem_sleeves" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/cb_zip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Zip"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        android:text="@string/zip"
+        app:layout_constraintStart_toStartOf="@+id/cb_water_proof"
+        app:layout_constraintTop_toBottomOf="@+id/cb_water_proof" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/cb_fire_retard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="42dp"
         android:layout_marginStart="42dp"
-        android:text="Fire retardant"
-        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox6"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox6"
+        android:text="@string/fire_retardant"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cb_velcro"
+        app:layout_constraintEnd_toStartOf="@+id/cb_velcro"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/cb_velcro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:text="Velcro cuffs"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        android:text="@string/velcro_cuffs"
+        app:layout_constraintStart_toStartOf="@+id/cb_zip"
+        app:layout_constraintTop_toBottomOf="@+id/cb_zip" />
 
     <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/cb_other"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:layout_marginTop="31dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/cb_fire_retard" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/et_other"
         android:layout_width="96dp"
         android:layout_height="35dp"
         android:layout_marginStart="10dp"
         android:ems="10"
-        android:hint="Other"
+        android:hint="@string/other"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/checkBox8"
-        app:layout_constraintTop_toTopOf="@+id/checkBox8" />
+        app:layout_constraintStart_toEndOf="@+id/cb_other"
+        app:layout_constraintTop_toTopOf="@+id/cb_other" />
 
 </android.support.constraint.ConstraintLayout>

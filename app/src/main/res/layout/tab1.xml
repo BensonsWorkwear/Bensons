@@ -26,7 +26,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView" />
 
     <CheckBox
-        android:id="@+id/hood"
+        android:id="@+id/cb_hood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="247dp"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="58dp"
         android:text="@string/round_neck"
-        app:layout_constraintBaseline_toBaselineOf="@+id/hood"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cb_hood"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
@@ -51,7 +51,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="46dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hood" />
+        app:layout_constraintTop_toBottomOf="@+id/cb_hood" />
 
     <EditText
         android:id="@+id/et_other"
@@ -67,6 +67,6 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/spinner"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/hood" />
+        app:layout_constraintTop_toBottomOf="@+id/cb_hood" />
 
 </android.support.constraint.ConstraintLayout>
