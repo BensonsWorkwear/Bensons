@@ -13,11 +13,26 @@
     tools:layout_editor_absoluteY="117dp">
 
     <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/close_text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:text="Select you packaging logo:"
+        android:text="@string/select_you_packaging_logo"
         android:textColor="@color/materialcolorpicker__black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -62,7 +77,7 @@
         android:layout_width="158dp"
         android:layout_height="112dp"
         android:layout_marginBottom="47dp"
-        android:contentDescription="Preview of the logo"
+        android:contentDescription="@string/preview_of_the_logo"
         app:layout_constraintBottom_toTopOf="@+id/upload_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
