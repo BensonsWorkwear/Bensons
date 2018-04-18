@@ -1,6 +1,8 @@
 package com.bensonsworkwear.bensons.selection;
 
+import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.ColorInt;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.bensonsworkwear.bensons.R;
 import com.bensonsworkwear.bensons.fragment.tabs.CapFragment;
@@ -27,9 +32,12 @@ import com.bensonsworkwear.bensons.fragment.tabs.Tab3;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
 
+import java.util.Objects;
+
 public class Selection extends AppCompatActivity {
 
     public ColorPicker cp;
+    Dialog myDialog;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -50,6 +58,8 @@ public class Selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
+
+        myDialog = new Dialog(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -97,6 +107,35 @@ public class Selection extends AppCompatActivity {
                 */
     }
 
+    public void showPopup(View v) {
+        TextView txtclose;
+        Button btnFinish;
+
+        myDialog.setContentView(R.layout.fragment_packaging);
+        txtclose = myDialog.findViewById(R.id.txtclose);
+
+        txtclose.setText("M");
+
+        btnFinish = myDialog.findViewById(R.id.finish);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+
+        btnFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Replace code to actually send the pdf
+                myDialog.dismiss();
+            }
+        });
+
+        Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -136,11 +175,11 @@ public class Selection extends AppCompatActivity {
             // getItem is called to return the current page.
             switch (position) {
                 case 0:
-                    return setTab("Tab1");
+                    return new Tab1();
                 case 1:
-                    return setTab("Tab2");
+                    return new Tab2();
                 case 2:
-                    return setTab("Tab3");
+                    return new Tab3();
                 default:
                     return null;
             }
