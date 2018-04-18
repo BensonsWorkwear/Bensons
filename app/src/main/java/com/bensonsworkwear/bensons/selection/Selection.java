@@ -16,6 +16,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.bensonsworkwear.bensons.R;
+import com.bensonsworkwear.bensons.fragment.tabs.CapFragment;
+import com.bensonsworkwear.bensons.fragment.tabs.JacketFragment;
+import com.bensonsworkwear.bensons.fragment.tabs.MaterialFragment;
+import com.bensonsworkwear.bensons.fragment.tabs.PrintFragment;
+import com.bensonsworkwear.bensons.fragment.tabs.TShirtFragment;
 import com.bensonsworkwear.bensons.fragment.tabs.Tab1;
 import com.bensonsworkwear.bensons.fragment.tabs.Tab2;
 import com.bensonsworkwear.bensons.fragment.tabs.Tab3;
@@ -131,11 +136,11 @@ public class Selection extends AppCompatActivity {
             // getItem is called to return the current page.
             switch (position) {
                 case 0:
-                    return new Tab1();
+                    return setTab("Tab1");
                 case 1:
-                    return new Tab2();
+                    return setTab("Tab2");
                 case 2:
-                    return new Tab3();
+                    return setTab("Tab3");
                 default:
                     return null;
             }
@@ -145,6 +150,29 @@ public class Selection extends AppCompatActivity {
         public int getCount() {
             // Show 3 total pages.
             return 3;
+        }
+
+        Fragment setTab(String className) {
+            switch (className) {
+                case "CapFragment":
+                    return new CapFragment();
+                case "JacketFragment":
+                    return new JacketFragment();
+                case "MaterialFragment":
+                    return new MaterialFragment();
+                case "PrintFragment":
+                    return new PrintFragment();
+                case "Tab1":
+                    return new Tab1();
+                case "Tab2":
+                    return new Tab2();
+                case "Tab3":
+                    return new Tab3();
+                case "TShirtFragment":
+                    return new TShirtFragment();
+                default:
+                    return new Tab1();
+            }
         }
 
         /*
