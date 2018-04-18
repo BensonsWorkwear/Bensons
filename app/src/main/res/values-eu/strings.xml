@@ -47,4 +47,6 @@
     <string name="type">Mota</string>
     <string name="name">Izena:</string>
     <string name="name_of_the_garment">Arroparen izena</string>
+    <string name="removable_sleeves">Maga aldagarriak</string>
+    <string name="velcro_cuffs">Eskumuturreko belkroa</string>
 </resources>

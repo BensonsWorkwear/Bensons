@@ -47,4 +47,6 @@
     <string name="select_you_packaging_logo">Selecciona el logo del paquete</string>
     <string name="n_pokets">N. Bolsillos</string>
     <string name="fire_retardant">Ignífugo</string>
+    <string name="velcro_cuffs">Velcro en las muñecas</string>
+    <string name="removable_sleeves">Mangas desabrochables</string>
 </resources>
