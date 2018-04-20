@@ -74,8 +74,8 @@
 
     <ImageView
         android:id="@+id/preview"
-        android:layout_width="158dp"
-        android:layout_height="112dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
         android:contentDescription="@string/preview_of_the_logo"
         app:layout_constraintBottom_toTopOf="@+id/upload_button"

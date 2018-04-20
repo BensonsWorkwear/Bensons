@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteY="25dp"
+    android:tag="tab3">
 
     <TextView
         android:id="@+id/material"
@@ -153,12 +154,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_additional_notes" />
 
     <Button
-        android:onClick="showPopup"
         android:id="@+id/btn_finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
         android:layout_marginEnd="17dp"
+        android:onClick="onClickFinish"
         android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

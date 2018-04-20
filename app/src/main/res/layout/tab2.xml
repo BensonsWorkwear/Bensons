@@ -19,10 +19,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/pick_colour"
+        android:id="@+id/btn_colour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="146dp"
+        android:onClick="showColorPicker"
         android:text="@string/pick_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +36,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="26dp"
         android:contentDescription="@string/preview"
-        app:layout_constraintBottom_toTopOf="@+id/pick_colour"
+        app:layout_constraintBottom_toTopOf="@+id/btn_colour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_preview"

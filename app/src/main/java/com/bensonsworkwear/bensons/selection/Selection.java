@@ -2,7 +2,7 @@ package com.bensonsworkwear.bensons.selection;
 
 import android.app.Dialog;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.PorterDuff;
 import android.support.annotation.ColorInt;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +17,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bensonsworkwear.bensons.R;
 import com.bensonsworkwear.bensons.fragment.tabs.CapFragment;
@@ -32,12 +32,11 @@ import com.bensonsworkwear.bensons.fragment.tabs.Tab3;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
 
-import java.util.Objects;
-
 public class Selection extends AppCompatActivity {
 
     public ColorPicker cp;
     Dialog myDialog;
+    ImageView preview;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -78,9 +77,7 @@ public class Selection extends AppCompatActivity {
 
         cp = new ColorPicker(this, 255, 255, 255, 255);
 
-        cp.show();
-
-        /* Set a new Listener called when user click "select" */
+        /* Sets a new Listener called when user click "select" */
         cp.setCallback(new ColorPickerCallback() {
 
             @Override
@@ -94,46 +91,39 @@ public class Selection extends AppCompatActivity {
 
                 Log.d("Pure Hex", Integer.toHexString(color));
                 Log.d("#Hex no alpha", String.format("#%06X", (0xFFFFFF & color)));
-                Log.d("#Hex with alpha", String.format("#%08X", (color)));
+                Log.d("#Hex with alpha", String.format("#%08X", color));
+
+                // Applies a color filter to the image with the selected hex value
+                preview = findViewById(R.id.preview_image);
+
+                preview.getDrawable().setColorFilter(color, PorterDuff.Mode.MULTIPLY );
             }
         });
-
-/*        new ShowcaseView.Builder(this)
-                .setTarget(new ActionViewTarget(this, ActionViewTarget.Type.HOME))
-                .setContentTitle("ShowcaseView")
-                .setContentText("This is highlighting the Home button")
-                .hideOnTouchOutside()
-                .build();
-                */
     }
 
-    public void showPopup(View v) {
-        TextView txtclose;
-        Button btnFinish;
+    /**
+     * Opens a popup with a hex color picker.
+     *
+     * @param v The view
+     */
+    public void showColorPicker(View v) {
+        Toast.makeText(getApplicationContext(), "Color picker", Toast.LENGTH_LONG).show();
+        cp.show();
+    }
 
-        myDialog.setContentView(R.layout.fragment_packaging);
-        txtclose = myDialog.findViewById(R.id.txtclose);
+    /**
+     * Opens a popup with the finish options.
+     *
+     * @param v The view
+     */
+    public void onClickFinish(View v) {
+        //Tab3 f = (Tab3) getFragmentManager().findFragmentByTag("tab3");
 
-        txtclose.setText("M");
+        //if (f != null) {
 
-        btnFinish = myDialog.findViewById(R.id.finish);
-        txtclose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myDialog.dismiss();
-            }
-        });
-
-        btnFinish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Replace code to actually send the pdf
-                myDialog.dismiss();
-            }
-        });
-
-        Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        myDialog.show();
+            Toast.makeText(getApplicationContext(), "El boton funciona", Toast.LENGTH_LONG).show();
+            cp.show();
+        //}
     }
 
     @Override
