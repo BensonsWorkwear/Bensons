@@ -3,6 +3,7 @@ package com.bensonsworkwear.bensons.selection;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.ColorInt;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bensonsworkwear.bensons.R;
@@ -32,11 +34,14 @@ import com.bensonsworkwear.bensons.fragment.tabs.Tab3;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
 
+import java.util.Objects;
+
 public class Selection extends AppCompatActivity {
 
     public ColorPicker cp;
     Dialog myDialog;
     ImageView preview;
+    TextView cuantity;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -57,6 +62,8 @@ public class Selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
+
+        cuantity = findViewById(R.id.cuantity);
 
         myDialog = new Dialog(this);
 
@@ -96,7 +103,7 @@ public class Selection extends AppCompatActivity {
                 // Applies a color filter to the image with the selected hex value
                 preview = findViewById(R.id.preview_image);
 
-                preview.getDrawable().setColorFilter(color, PorterDuff.Mode.MULTIPLY );
+                preview.getDrawable().setColorFilter(color, PorterDuff.Mode.MULTIPLY);
             }
         });
     }
@@ -107,7 +114,6 @@ public class Selection extends AppCompatActivity {
      * @param v The view
      */
     public void showColorPicker(View v) {
-        Toast.makeText(getApplicationContext(), "Color picker", Toast.LENGTH_LONG).show();
         cp.show();
     }
 
@@ -117,13 +123,30 @@ public class Selection extends AppCompatActivity {
      * @param v The view
      */
     public void onClickFinish(View v) {
-        //Tab3 f = (Tab3) getFragmentManager().findFragmentByTag("tab3");
+        TextView txtclose;
+        /*if (!cuantity.getText().toString().isEmpty()) {
+            if (Integer.parseInt(cuantity.getText().toString()) < 300) {
+                Toast.makeText(getApplicationContext(), "Minimum order of 300 units", Toast.LENGTH_LONG).show();
+            }
+        }*/
 
-        //if (f != null) {
+        Toast.makeText(getApplicationContext(), "El boton funciona", Toast.LENGTH_LONG).show();
 
-            Toast.makeText(getApplicationContext(), "El boton funciona", Toast.LENGTH_LONG).show();
-            cp.show();
-        //}
+        myDialog.setContentView(R.layout.fragment_packaging);
+
+        txtclose = myDialog.findViewById(R.id.txtclose);
+        txtclose.setText("M");
+
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+
+        Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        myDialog.show();
     }
 
     @Override
