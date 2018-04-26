@@ -3,7 +3,7 @@
     package="com.bensonsworkwear.bensons">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <!-- TODO: Add ACTION-VIEW intent filter -->
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_2fc0f90a4a2557743872ad1244282fa0"
