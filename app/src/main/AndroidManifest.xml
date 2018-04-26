@@ -26,8 +26,8 @@
         <activity android:name=".fragment.tabs.TShirtFragment" />
         <activity android:name=".fragment.tabs.MaterialFragment" />
         <activity android:name=".fragment.tabs.CapFragment" />
-        <activity android:name=".fragment.GarmentFragment" />
-        <activity android:name=".fragment.PackagingFragment" />
+        <activity android:name=".popups.GarmentPopup" />
+        <activity android:name=".popups.PackagingPopup" />
     </application>
 
 </manifest>

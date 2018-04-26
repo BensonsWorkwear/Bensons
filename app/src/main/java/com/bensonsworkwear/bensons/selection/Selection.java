@@ -21,7 +21,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bensonsworkwear.bensons.R;
 import com.bensonsworkwear.bensons.fragment.tabs.CapFragment;
@@ -133,7 +132,7 @@ public class Selection extends AppCompatActivity {
             }
         }*/
 
-        myDialog.setContentView(R.layout.fragment_packaging);
+        myDialog.setContentView(R.layout.popup_packaging);
         txtClose = myDialog.findViewById(R.id.txtclose);
 
         txtClose.setOnClickListener(new View.OnClickListener() {

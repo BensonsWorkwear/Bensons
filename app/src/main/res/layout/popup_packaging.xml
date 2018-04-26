@@ -8,7 +8,7 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".fragment.PackagingFragment"
+    tools:context=".popups.PackagingPopup"
     tools:layout_editor_absoluteX="31dp"
     tools:layout_editor_absoluteY="117dp">
 

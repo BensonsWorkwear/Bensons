@@ -1,4 +1,4 @@
-package com.bensonsworkwear.bensons.fragment;
+package com.bensonsworkwear.bensons.popups;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,14 +16,14 @@ import com.bensonsworkwear.bensons.R;
 
 import java.io.FileNotFoundException;
 
-public class PackagingFragment extends AppCompatActivity {
+public class PackagingPopup extends AppCompatActivity {
     //https://stackoverflow.com/questions/11144783/how-to-access-an-image-from-the-phones-photo-gallery#11144927
     ImageView targetImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_packaging);
+        setContentView(R.layout.popup_packaging);
 
         Button buttonLoadImage = findViewById(R.id.upload_button);
         targetImage = findViewById(R.id.preview);
