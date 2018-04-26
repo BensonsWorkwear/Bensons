@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +42,7 @@ public class Selection extends AppCompatActivity {
     public ColorPicker cp;
     Dialog myDialog;
     ImageView preview;
-    TextView cuantity;
+    EditText quantity;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -63,7 +64,7 @@ public class Selection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-        cuantity = findViewById(R.id.cuantity);
+        quantity = findViewById(R.id.quantity);
 
         myDialog = new Dialog(this);
 
@@ -104,6 +105,8 @@ public class Selection extends AppCompatActivity {
                 preview = findViewById(R.id.preview_image);
 
                 preview.getDrawable().setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                cp.dismiss();
             }
         });
     }
@@ -123,21 +126,17 @@ public class Selection extends AppCompatActivity {
      * @param v The view
      */
     public void onClickFinish(View v) {
-        TextView txtclose;
-        /*if (!cuantity.getText().toString().isEmpty()) {
-            if (Integer.parseInt(cuantity.getText().toString()) < 300) {
+        TextView txtClose;
+        /*if (!quantity.getText().toString().isEmpty() || quantity.getText().toString().equals("")) {
+            if (Integer.parseInt(quantity.getText().toString()) < 300) {
                 Toast.makeText(getApplicationContext(), "Minimum order of 300 units", Toast.LENGTH_LONG).show();
             }
         }*/
 
-        Toast.makeText(getApplicationContext(), "El boton funciona", Toast.LENGTH_LONG).show();
-
         myDialog.setContentView(R.layout.fragment_packaging);
+        txtClose = myDialog.findViewById(R.id.txtclose);
 
-        txtclose = myDialog.findViewById(R.id.txtclose);
-        txtclose.setText("M");
-
-        txtclose.setOnClickListener(new View.OnClickListener() {
+        txtClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 myDialog.dismiss();
@@ -145,7 +144,6 @@ public class Selection extends AppCompatActivity {
         });
 
         Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
         myDialog.show();
     }
 

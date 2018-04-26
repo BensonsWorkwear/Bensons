@@ -5,7 +5,7 @@
     android:layout_width="350dp"
     android:layout_height="475dp"
     android:layout_gravity="center"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     android:padding="5dp"
     tools:context=".fragment.PackagingFragment"
@@ -74,8 +74,8 @@
 
     <ImageView
         android:id="@+id/preview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="99dp"
+        android:layout_height="124dp"
         android:layout_marginBottom="47dp"
         android:contentDescription="@string/preview_of_the_logo"
         app:layout_constraintBottom_toTopOf="@+id/upload_button"
