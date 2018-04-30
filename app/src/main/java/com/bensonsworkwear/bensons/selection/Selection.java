@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bensonsworkwear.bensons.R;
 import com.bensonsworkwear.bensons.fragment.tabs.CapFragment;
@@ -67,8 +68,7 @@ public class Selection extends AppCompatActivity {
 
         myDialog = new Dialog(this);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -128,9 +128,9 @@ public class Selection extends AppCompatActivity {
         TextView txtClose;
         //Checks if the textbox is empty before validating.
         if (quantity.getText() != null) {
-            if (Integer.parseInt(quantity.getText().toString().trim().length() > 0) {
+            if (quantity.getText().toString().trim().length() > 0) {
                 Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
-            } else if (quantity.getText().toString()) < 300) {
+            } else if (Integer.parseInt(quantity.getText().toString()) < 300) {
                 Toast.makeText(getApplicationContext(), "Minimum order of 300 units", Toast.LENGTH_LONG).show();
             }
         } else {
@@ -190,11 +190,11 @@ public class Selection extends AppCompatActivity {
             // getItem is called to return the current page.
             switch (position) {
                 case 0:
-                    return new Tab1();
+                    return launchTab("Tab1");
                 case 1:
-                    return new Tab2();
+                    return launchTab("Tab2");
                 case 2:
-                    return new Tab3();
+                    return launchTab("Tab3");
                 default:
                     return null;
             }
@@ -206,7 +206,7 @@ public class Selection extends AppCompatActivity {
             return 3;
         }
 
-        Fragment setTab(String className) {
+        private Fragment launchTab(String className) {
             switch (className) {
                 case "CapFragment":
                     return new CapFragment();
@@ -230,17 +230,17 @@ public class Selection extends AppCompatActivity {
         }
 
         /*
-        //It should change the name of the tabs but it doesn't work.
+        //This should change the name of the tabs but it doesn't work.
         @Override
         public CharSequence getPageTitle(int position) {
             //Returns the name of the title based on the position
             switch (position) {
                 case 0:
-                    return "Tabla 1";
+                    return "Test 1";
                 case 1:
-                    return "Tabla 2";
+                    return "Test 2";
                 case 2:
-                    return "Tabla 3";
+                    return "Test 3";
                 default:
                     return null;
             }

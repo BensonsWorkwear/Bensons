@@ -74,6 +74,7 @@
     <string name="name">Name:</string>
     <string name="name_of_the_garment">Name of the garment</string>
     <string name="close_text">X</string>
+    <string name="accept">Accept</string>
 
     <string-array name="sizes">
         <item>S</item>

@@ -2,10 +2,29 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    android:layout_width="350dp"
+    android:layout_height="475dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
     tools:context=".popups.GarmentPopup"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteX="31dp"
+    tools:layout_editor_absoluteY="117dp">
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/close_text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -18,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/garment_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -55,37 +74,19 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/cap" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/jacket" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rb_tshirt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/t_shirt" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rb_polo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/polo" />
+
         </TableRow>
 
         <TableRow
@@ -93,18 +94,18 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/rb_jacket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/jacket" />
+
+            <RadioButton
+                android:id="@+id/rb_trousers"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/trousers" />
-
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/print" />
         </TableRow>
 
         <TableRow
@@ -112,14 +113,33 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton7"
+                android:id="@+id/rb_vest"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/vest" />
 
             <RadioButton
-                android:id="@+id/radioButton8"
+                android:id="@+id/rb_cap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/cap" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rb_print"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/print" />
+
+            <RadioButton
+                android:id="@+id/rb_embroidery"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -127,4 +147,14 @@
         </TableRow>
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
