@@ -126,11 +126,16 @@ public class Selection extends AppCompatActivity {
      */
     public void onClickFinish(View v) {
         TextView txtClose;
-        /*if (!quantity.getText().toString().isEmpty() || quantity.getText().toString().equals("")) {
-            if (Integer.parseInt(quantity.getText().toString()) < 300) {
+        //Checks if the textbox is empty before validating.
+        if (quantity.getText() != null) {
+            if (Integer.parseInt(quantity.getText().toString().trim().length() > 0) {
+                Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
+            } else if (quantity.getText().toString()) < 300) {
                 Toast.makeText(getApplicationContext(), "Minimum order of 300 units", Toast.LENGTH_LONG).show();
             }
-        }*/
+        } else {
+            Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
+        }
 
         myDialog.setContentView(R.layout.popup_packaging);
         txtClose = myDialog.findViewById(R.id.txtclose);
