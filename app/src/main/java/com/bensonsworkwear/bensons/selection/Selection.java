@@ -69,6 +69,7 @@ public class Selection extends AppCompatActivity {
         myDialog = new Dialog(this);
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -90,8 +91,7 @@ public class Selection extends AppCompatActivity {
 
             @Override
             public void onColorChosen(@ColorInt int color) {
-                // Do whatever you want
-                // Examples
+                // The logs bellow aren't necessary it's just to check that everything works correctly
                 Log.d("Alpha", Integer.toString(Color.alpha(color)));
                 Log.d("Red", Integer.toString(Color.red(color)));
                 Log.d("Green", Integer.toString(Color.green(color)));

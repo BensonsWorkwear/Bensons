@@ -46,6 +46,12 @@ public class GarmentPopup extends AppCompatActivity {
         onCheckedChangedListener(rg);
     }
 
+    //This function does nothing, there is a problem somewhere. Good luck!
+    /**
+     * Detects if a {@link RadioButton} has been selected
+     *
+     * @param rg The {@link RadioGroup}
+     */
     public void onCheckedChangedListener(RadioGroup rg) {
         TableRow v;
         RadioButton rb;
@@ -58,6 +64,7 @@ public class GarmentPopup extends AppCompatActivity {
                 if (rb != null) {
                     View.OnClickListener first_radio_listener = new View.OnClickListener() {
                         public void onClick(View v) {
+                            //TODO: Here you should deselect any other RadioButton that was selected except the one that was just selected. You should probably call another function that does that.
                             Toast.makeText(getApplicationContext(), "Change", Toast.LENGTH_LONG).show();
                         }
                     };
