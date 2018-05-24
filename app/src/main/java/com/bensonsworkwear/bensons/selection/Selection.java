@@ -163,6 +163,12 @@ public class Selection extends AppCompatActivity {
         }
     }
 
+    /**
+     * Inflates the menu when it's created
+     *
+     * @param menu The menu
+     * @return Returns true if successful
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -170,6 +176,12 @@ public class Selection extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Gets the selected item
+     *
+     * @param item The element of the menu
+     * @return Returns true if successfully found, otherwise it returns the item
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -185,7 +197,7 @@ public class Selection extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //placeHolderFragment class was deleted from here
+    //The auto-generated placeHolderFragment class was deleted from here
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
