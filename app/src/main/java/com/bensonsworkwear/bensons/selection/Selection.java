@@ -145,6 +145,7 @@ public class Selection extends AppCompatActivity {
 
     //TODO: This validation function works but it's not called
     //TODO: It should receive the TextBox to validate as a parameter
+
     /**
      * Validates the garment quantity
      */
@@ -195,6 +196,7 @@ public class Selection extends AppCompatActivity {
             super(fm);
         }
 
+        //TODO: Make this not static, it should load different fragments depending on the selected RadioButton on the garmentPopup
         @Override
         public Fragment getItem(int position) {
             // getItem is called to return the current page.
@@ -210,12 +212,21 @@ public class Selection extends AppCompatActivity {
             }
         }
 
+        /**
+         * This is the amount of tabs and there is no need to change it
+         *
+         * @return The amount of tabs
+         */
         @Override
         public int getCount() {
             // Show 3 total pages.
             return 3;
         }
 
+        /* I have another similar piece of code somewhere else
+         * the idea is that depending on what you select in the garmentPopup
+         * it will launch different tabs
+         */
         private Fragment launchTab(String className) {
             switch (className) {
                 case "CapFragment":
@@ -240,7 +251,11 @@ public class Selection extends AppCompatActivity {
         }
 
         /*
-        //This should change the name of the tabs but it doesn't work.
+         * This should change the name of the tabs but it doesn't work.
+         * It's commented out just in case, it doesn't crash or do
+         * anything for that matter, but I don't want to risk it.
+         */
+        /*
         @Override
         public CharSequence getPageTitle(int position) {
             //Returns the name of the title based on the position
