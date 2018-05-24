@@ -1,16 +1,25 @@
 package com.bensonsworkwear.bensons;
 
-import android.content.Intent;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.bensonsworkwear.bensons.constants.Constants;
@@ -18,9 +27,10 @@ import com.bensonsworkwear.bensons.fragment.navigation_drawer.AboutFragment;
 import com.bensonsworkwear.bensons.fragment.navigation_drawer.BaseFragment;
 import com.bensonsworkwear.bensons.fragment.navigation_drawer.NavigationFragment;
 import com.bensonsworkwear.bensons.fragment.navigation_drawer.ElementFragment;
-import com.bensonsworkwear.bensons.selection.Selection;
 import com.bensonsworkwear.bensons.fragment.navigation_drawer.SendFragment;
 import com.bensonsworkwear.bensons.fragment.navigation_drawer.Create_Pdf_Fragment;
+
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +42,10 @@ import static android.view.Gravity.START;
 public class NavigationActivity extends AppCompatActivity {
 
     DrawerLayout drawer;
+    Dialog myDialog;
+    ImageView preview;
+    EditText quantity;
+    ConstraintLayout layout;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -39,6 +53,8 @@ public class NavigationActivity extends AppCompatActivity {
     ImageView toolbar_ivNavigation;
     @BindView(R.id.toolbar_tvTitle)
     TextView tvTitle;
+
+    RadioGroup rg;
 
     /**
      * No being used currently
@@ -63,10 +79,12 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
 
         unbinder = ButterKnife.bind(this);
+        myDialog = new Dialog(this);
         toolbar = findViewById(R.id.toolbar);
         setToolbarTitle(getString(R.string.title_navigation_activity));
         toolbar.setNavigationIcon(null);
         setSupportActionBar(toolbar);
+        rg = myDialog.findViewById(R.id.radioGroup);
 
         drawer = findViewById(R.id.drawerLayout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -118,9 +136,9 @@ public class NavigationActivity extends AppCompatActivity {
         String tag = null;
 
         /* Parameter comes from the element pressed in the navigation drawer.
-        * Pressing the first one will give the value 0, which means that the user
-        * wants to go to the news section
-        */
+         * Pressing the first one will give the value 0, which means that the user
+         * wants to go to the news section
+         */
         switch (position) {
             case 0:
                 fragment = BaseFragment.newInstance();
@@ -143,21 +161,98 @@ public class NavigationActivity extends AppCompatActivity {
                 tag = Constants.TAG_FRG_ABOUT;
                 break;
             case 5:
-                Intent intent = new Intent(this, Selection.class);
-                this.startActivity(intent);
-
-                /*
-                * The app tries to change fragments and then changes activity
-                * but it crashes because there is no fragment or tag and then
-                * opens the activity.
-                */
-                fragment = BaseFragment.newInstance();
-                tag = Constants.TAG_FRG_BASE;
+                showGarmentPopup();
                 break;
         }
 
-        replaceFragment(fragment, tag);
+        if (position != 5) {
+            replaceFragment(fragment, tag);
+        }
 
+    }
+
+    /**
+     *
+     */
+    public void showGarmentPopup() {
+        TextView txtClose;
+        Button accept;
+
+        //validateQuantity();
+
+        myDialog.setContentView(R.layout.popup_garment);
+        txtClose = myDialog.findViewById(R.id.txtclose);
+        accept = myDialog.findViewById(R.id.btn_accept);
+
+        txtClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                /* This should be in the Selection.java file
+                 * not here. This makes no sense.
+                 * Also the case is not doing anything.
+                 * TODO: Pressing accept should run the proper activity/fragments
+                 * TODO: Add return values
+                 */
+                switch (selectedRadioButton(rg)) {
+                    case "T-Shirt":
+                        break;
+                    case "Polo":
+                        break;
+                    case "Jacket":
+                        break;
+                    case "Trousers":
+                        break;
+                    case "Vest":
+                        break;
+                    case "Cap":
+                        break;
+                    case "Print":
+                        break;
+                    case "Embroidery":
+                        break;
+                }
+
+                myDialog.dismiss();
+            }
+        });
+
+        Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+    /**
+     * Takes a {@link RadioGroup} and returns the selected {@link RadioButton}. The
+     * {@link RadioButton} does not have to be a direct child of the {@link RadioGroup}
+     *
+     * @param rg The {@link RadioGroup} where the {@link RadioButton}s are.
+     * @return The string of the selected {@link RadioButton}
+     */
+    public String selectedRadioButton(RadioGroup rg) {
+        TableRow v;
+        RadioButton rb;
+
+        for (int i = 0; i < rg.getChildCount(); i++) {
+            v = (TableRow) rg.getChildAt(i);
+
+            for (int x = 0; x < v.getChildCount(); x++) {
+                rb = (RadioButton) v.getChildAt(x);
+                if (rb != null) {
+                    if (rb.isChecked()) {
+                        return rb.getText().toString();
+                    }
+                }
+            }
+        }
+
+        return null;
     }
 
     /**

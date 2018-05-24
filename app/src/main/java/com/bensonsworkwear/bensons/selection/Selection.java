@@ -126,16 +126,8 @@ public class Selection extends AppCompatActivity {
      */
     public void onClickFinish(View v) {
         TextView txtClose;
-        //Checks if the textbox is empty before validating.
-        if (quantity.getText() != null) {
-            if (quantity.getText().toString().trim().length() > 0) {
-                Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
-            } else if (Integer.parseInt(quantity.getText().toString()) < 300) {
-                Toast.makeText(getApplicationContext(), "Minimum order of 300 units", Toast.LENGTH_LONG).show();
-            }
-        } else {
-            Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
-        }
+
+        //validateQuantity();
 
         myDialog.setContentView(R.layout.popup_packaging);
         txtClose = myDialog.findViewById(R.id.txtclose);
@@ -149,6 +141,19 @@ public class Selection extends AppCompatActivity {
 
         Objects.requireNonNull(myDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+    }
+
+    public void validateQuantity() {
+        //Checks if the TextBox is empty before validating.
+        if (quantity.getText() != null) {
+            if (quantity.getText().toString().trim().length() > 0) {
+                Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
+            } else if (Integer.parseInt(quantity.getText().toString()) < 300) {
+                Toast.makeText(getApplicationContext(), "Minimum order of 300 units", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            Toast.makeText(getApplicationContext(), "The quantity can't be empty", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

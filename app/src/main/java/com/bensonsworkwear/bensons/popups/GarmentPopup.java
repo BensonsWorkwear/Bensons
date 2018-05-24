@@ -4,19 +4,26 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.bensonsworkwear.bensons.R;
-import com.bensonsworkwear.bensons.selection.Selection;
 
 public class GarmentPopup extends AppCompatActivity {
+
+    ConstraintLayout layout;
+    RadioGroup rg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.popup_garment);
+
+        layout = findViewById(R.id.layout);
+
+        rg = findViewById(R.id.radioGroup);
 
         findViewById(R.id.btn_accept).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,22 +42,46 @@ public class GarmentPopup extends AppCompatActivity {
                 //this.dismiss();
             }
         });
+
+        onCheckedChangedListener(rg);
     }
 
-    private String selectedGarment() {
-        ConstraintLayout layout = findViewById(R.id.layout);
+    public void onCheckedChangedListener(RadioGroup rg) {
+        TableRow v;
+        RadioButton rb;
 
-        //Loops through the view to find RadioButtons
-        for (int i = 0; i < layout.getChildCount(); i++) {
-            View v = layout.getChildAt(i);
+        for (int i = 0; i < rg.getChildCount(); i++) {
+            v = (TableRow) rg.getChildAt(i);
 
-            //If the RadioButton is selected it returns it's id
-            if (v instanceof RadioButton) {
-                if (((RadioButton) v).isChecked()) {
-                    return ((RadioButton) v).getText().toString();
+            for (int x = 0; x < v.getChildCount(); x++) {
+                rb = (RadioButton) v.getChildAt(x);
+                if (rb != null) {
+                    View.OnClickListener first_radio_listener = new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Change", Toast.LENGTH_LONG).show();
+                        }
+                    };
+
+                    rb.setOnClickListener(first_radio_listener);
                 }
             }
         }
-        return null;
     }
+
+    /*    private String selectedGarment() {
+            ConstraintLayout layout = findViewById(R.id.layout);
+
+            //Loops through the view to find RadioButtons
+            for (int i = 0; i < layout.getChildCount(); i++) {
+                View v = layout.getChildAt(i);
+
+                //If the RadioButton is selected it returns it's id
+                if (v instanceof RadioButton) {
+                    if (((RadioButton) v).isChecked()) {
+                        return ((RadioButton) v).getText().toString();
+                    }
+                }
+            }
+            return null;
+        }*/
 }
