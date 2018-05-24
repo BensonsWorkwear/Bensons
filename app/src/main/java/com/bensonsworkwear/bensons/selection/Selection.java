@@ -143,6 +143,11 @@ public class Selection extends AppCompatActivity {
         myDialog.show();
     }
 
+    //TODO: This validation function works but it's not called
+    //TODO: It should receive the TextBox to validate as a parameter
+    /**
+     * Validates the garment quantity
+     */
     public void validateQuantity() {
         //Checks if the TextBox is empty before validating.
         if (quantity.getText() != null) {

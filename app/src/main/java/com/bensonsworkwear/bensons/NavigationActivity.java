@@ -172,7 +172,7 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * Sets the listener for the close and accept button
      */
     public void showGarmentPopup() {
         TextView txtClose;
