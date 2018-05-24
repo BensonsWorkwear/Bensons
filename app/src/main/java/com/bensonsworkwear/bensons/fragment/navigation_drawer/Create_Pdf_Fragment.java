@@ -18,6 +18,12 @@ public class Create_Pdf_Fragment extends Fragment {
         return new Create_Pdf_Fragment();
     }
 
+    /**
+     * @param inflater The {@link LayoutInflater}
+     * @param container The container where the {@link Fragment} is going to be
+     * @param savedInstanceState The instance saved if there is any
+     * @return The current {@link View}
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

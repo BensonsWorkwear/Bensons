@@ -34,6 +34,9 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
         this.listener = listener;
     }
 
+    /**
+     * The holder for the recycler view
+     */
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         @Nullable

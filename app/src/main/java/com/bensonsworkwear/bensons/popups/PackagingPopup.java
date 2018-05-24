@@ -39,6 +39,13 @@ public class PackagingPopup extends AppCompatActivity {
         });
     }
 
+    /**
+     * Get's the image from the gallery and then returns to this app
+     *
+     * @param requestCode Identifier of the return call.
+     * @param resultCode The result.
+     * @param data The activity to be executed
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
