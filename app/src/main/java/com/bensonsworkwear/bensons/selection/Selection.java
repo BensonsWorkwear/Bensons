@@ -82,6 +82,7 @@ public class Selection extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        //The color picker palette with the parent activity and the default colors and transparency
         cp = new ColorPicker(this, 255, 255, 255, 255);
 
         /* Sets a new Listener called when user click "select" */
@@ -184,7 +185,7 @@ public class Selection extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Deleted placeHolderFragment class was deleted from here
+    //placeHolderFragment class was deleted from here
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
