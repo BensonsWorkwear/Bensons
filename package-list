@@ -1,5 +1,8 @@
 com.bensonsworkwear.bensons
 com.bensonsworkwear.bensons.adapter
 com.bensonsworkwear.bensons.constants
-com.bensonsworkwear.bensons.fragment
+com.bensonsworkwear.bensons.fragment.navigation_drawer
+com.bensonsworkwear.bensons.fragment.tabs
 com.bensonsworkwear.bensons.model
+com.bensonsworkwear.bensons.popups
+com.bensonsworkwear.bensons.selection
